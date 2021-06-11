@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/artistSearchFragment">
+
+    <fragment
+        android:id="@+id/artistSearchFragment"
+        android:name="com.example.gm_challenge.view.ArtistSearchFragment"
+        android:label="fragment_artist_search"
+        tools:layout="@layout/fragment_artist_search" >
+        <action
+            android:id="@+id/action_artistSearchFragment_to_artistsListFragment"
+            app:destination="@id/artistsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artsitDetailsFragment"
+        android:name="com.example.gm_challenge.ArtsitDetailsFragment"
+        android:label="fragment_artsit_details"
+        tools:layout="@layout/fragment_artsit_details" >
+        <argument
+            android:name="gmResponse"
+            app:argType="com.example.gm_challenge.model.GMResponse" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistsListFragment"
+        android:name="com.example.gm_challenge.ArtistsListFragment"
+        android:label="fragment_artists_list"
+        tools:layout="@layout/fragment_artists_list" >
+        <action
+            android:id="@+id/action_artistsListFragment_to_artsitDetailsFragment"
+            app:destination="@id/artsitDetailsFragment" />
+        <argument
+            android:name="artistName"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
