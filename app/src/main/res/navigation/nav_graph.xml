@@ -16,16 +16,16 @@
     </fragment>
     <fragment
         android:id="@+id/artsitDetailsFragment"
-        android:name="com.example.gm_challenge.ArtsitDetailsFragment"
+        android:name="com.example.gm_challenge.view.ArtsitDetailsFragment"
         android:label="fragment_artsit_details"
         tools:layout="@layout/fragment_artsit_details" >
         <argument
-            android:name="gmResponse"
-            app:argType="com.example.gm_challenge.model.GMResponse" />
+            android:name="gmResult"
+            app:argType="com.example.gm_challenge.model.Result" />
     </fragment>
     <fragment
         android:id="@+id/artistsListFragment"
-        android:name="com.example.gm_challenge.ArtistsListFragment"
+        android:name="com.example.gm_challenge.view.ArtistsListFragment"
         android:label="fragment_artists_list"
         tools:layout="@layout/fragment_artists_list" >
         <action
